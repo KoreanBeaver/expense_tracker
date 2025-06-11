@@ -63,11 +63,7 @@ Please avoid entering sensitive personal or financial information.
 ## 🙋‍♂️ Author
 
 Built by **Kwang Suk Sul**  
-Feel free to fork, modify, or give feedback!
+Feel free to fork or give feedback!
 
 ---
-
-## 📌 License
-
-[MIT License](LICENSE)
 

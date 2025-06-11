@@ -321,4 +321,23 @@ document.addEventListener("DOMContentLoaded", function () {
       reader.readAsText(file);
     });
   });
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(reg => {
+      console.log("✅ Service worker registered");
+  
+      reg.onupdatefound = () => {
+        const newWorker = reg.installing;
+        newWorker.onstatechange = () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            console.log("🆕 New version found. Reloading...");
+            window.location.reload();
+          }
+        };
+      };
+    }).catch(err => {
+      console.error("❌ Service worker registration failed:", err);
+    });
+  }
+  
   

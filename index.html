@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <button id="home-btn">🏠 Home</button>
+      <button id="analysis-btn">💰 Expense Analysis</button>
+    </nav>
+  
+    <!-- 메인 화면 -->
+    <div id="main-view">
+      <div class="top-bar">
+        <h1>Account Book</h1>
+        <select id="currency-selector">
+          <option value="KRW">₩ KRW</option>
+          <option value="USD">$ USD</option>
+          <option value="GBP">£ GBP</option>
+          <option value="EUR">€ EUR</option>
+          <option value="AUD">A$ AUD</option>
+          <option value="CAD">C$ CAD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+
+      <div id="csv-controls" style="margin: 10px 0;">
+        <button id="export-btn">📤 Export CSV</button>
+        <input type="file" id="import-input" accept=".csv" style="display: none;" />
+        <button id="import-btn">📥 Import CSV</button>
+      </div>    
+
+      <form id="expense-form">
+        <input type="date" id="date" required />
+        <input type="number" id="amount" placeholder="amount" required />
+        <select id="category" required>
+          <option value="">Expense Type</option>
+          <option value="Food">Dining</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Others">Others</option>
+        </select>
+        <input type="text" id="note" placeholder="memo (optional)" />
+        <button type="submit">Save</button>
+      </form>
+  
+      <div id="summary-controls">
+        <label for="summary-type">View:</label>
+        <select id="summary-type">
+          <option value="all">All</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+          <option value="category">By Category</option>
+        </select>
+      </div>
+      <div id="summary-output"></div>
+  
+      <h2>Expense List</h2>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Note</th>
+            <th>Currency</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+      </table>
+    </div>
+  
+    <!-- 분석 화면 -->
+    <div id="analysis-view" style="display: none;">
+      <h2>Expense Analysis 💰</h2>
+  
+      <div id="chart-controls">
+        <label for="chart-type">Chart:</label>
+        <select id="chart-type">
+          <option value="">-- Select Chart --</option>
+          <option value="category">By Category</option>
+          <option value="monthly">Monthly</option>
+          <option value="weekly">Weekly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+  
+      <canvas id="expense-chart" width="600" height="300"></canvas>
+    </div>
+  
+    <!-- Chart.js CDN (다음 단계에서 연동할 때 사용) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+  
+

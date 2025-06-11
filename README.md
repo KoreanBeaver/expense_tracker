@@ -42,13 +42,27 @@ Fully functional offline, works on desktop and mobile as a PWA.
 
 ---
 
-## 📱 PWA Install Instructions
+## 📱 Mobile App Installation (PWA)
 
-- On mobile:
-  - Open in Chrome/Safari
-  - Tap "Add to Home Screen"
-- On desktop:
-  - Click the install icon in the address bar (Chrome/Edge)
+This app works just like a native mobile app!  
+You can install it on your phone home screen in a few seconds.
+
+### 📲 Android (Chrome)
+
+1. Open the app in Chrome  
+2. Tap the **menu (⋮)** icon in the top right  
+3. Select **“Add to Home screen”**  
+4. The app icon will appear on your home screen and open in full-screen mode like a native app
+
+### 📱 iPhone (Safari)
+
+1. Open the app in Safari  
+2. Tap the **Share** icon (at the bottom)  
+3. Scroll down and tap **“Add to Home Screen”**  
+4. Tap **Add** → The app icon will be added to your home screen
+
+> Once installed, the app will run independently of the browser — no address bar, no tabs.  
+> It behaves just like a regular mobile app!
 
 ---
 

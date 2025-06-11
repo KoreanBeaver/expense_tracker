@@ -31,7 +31,7 @@ Fully functional offline, works on desktop and mobile as a PWA.
 
 ### ▶️ Try it Live
 
-**[👉 Launch App](https://your-netlify-link.netlify.app)**
+**[👉 Launch App](https://famous-madeleine-6c54ff.netlify.app/)**
 
 ### 🛠 Local Development
 

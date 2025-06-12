@@ -81,3 +81,9 @@ Feel free to fork or give feedback!
 
 ---
 
+## Version info
+
+Alpha 1.0.12
+
+Test ongoing by users from 11th June 2025
+
